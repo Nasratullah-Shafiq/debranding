@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="web_login_layout_inherit" inherit_id="web.login_layout" name="Web Login Layout">
+        <xpath expr="//div[@class='card-body']//div[last()]" position="replace">
+            <div class="text-center small mt-4 pt-3 login--footer" t-if="not disable_footer">
+            </div>
+        </xpath>
+    </template>
+
+
+<!--    hide power by odoo in portal user-->
+    <template id="brand_promotion_inherit" inherit_id="web.brand_promotion">
+        <!-- Use XPath to hide the 'o_brand_promotion' div -->
+        <xpath expr="//div[@class='o_brand_promotion']" position="replace">
+            <!-- Replacing with nothing, effectively removing it -->
+        </xpath>
+    </template>
+
+</odoo>
