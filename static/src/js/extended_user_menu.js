@@ -18,7 +18,6 @@ patch(UserMenu.prototype, {
         if (originalSetup) {
             originalSetup.call(this, ...arguments);
         }
-
         // Removing items from the user menu
         userMenuRegistry.remove("documentation");
         userMenuRegistry.remove("support");
